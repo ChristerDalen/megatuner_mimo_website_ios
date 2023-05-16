@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Megatuner</title>
+  <link rel="icon" type="image/png" href="img/Megatuner_invis.png">
+  <link rel="stylesheet" href="css/style.css">
+  	<style>
+		.answer {
+			display: none;
+		}
+
+		.question {
+			cursor: pointer;
+		}
+		.question::before {
+			content: "+";
+			display: inline-block;
+			margin-right: 0.5em;
+		}
+
+		.question.active::before {
+			content: "-";
+		}
+	</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="WhatsNew.html">What’s New</a></li>
+        <li><a href="AppPrivacy.html">App Privacy</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="hero">
+      <ul>
+	<h2 class="question">What is Megatuner?</h2>
+	<p class="answer">Megatuner is a PI/PID controller tuning app for iOS. It only needs some excited input and output data from your process loop to calculate the PID controller parameters. </p>
+	<h2 class="question">What makes this app better than existing solutions?</h2>
+	<p class="answer"> Other existing solutions is usually limited to stable or integrator processes (which may be sufficient for alot of processes/systems). However, this app is not limited and can take on unstable system/processes and systems with complex poles or zeros.
+	 </p>
+	<h2 class="question">Is it free?</h2>
+	<p class="answer">Megatuner is free with the option to subscribe, however the free version is sufficient for tuning your PI/PID controllers. The subscription option adds the following: save/load your projects, inspecting/copy-pasting your simulator model and conversion to desired DCS vendor (20 vendors as of now).</p>
+	<h2 class="question">What devices is the app compatible with?</h2>
+	<p class="answer">Megatuner can be used on iOS/iPadOS 16.0 or later, and macOS 13 or later and a Mac with Apple M1 chip or later.</p>
+	<h2 class="question">Future Updates?</h2>
+	<p class="answer"> An OPC-UA feature is in the workings, and will be added in future, making it possible for online PI/PID controller tuning. Also robustness measures, i.e. Gain margin, phase margin, (or delay margin), are planned to be added on a later date.</p>
+	<h2 class="question">Do you miss a feature?</h2>
+	<p class="answer"> Contact: 00215069@protonmail.com</p>
+	<h2 class="question">Will it be released on other platforms?</h2>
+	<p class="answer">The app might be released on Android and/or Web.</p>
+	<script>
+		var questions = 
+document.getElementsByClassName("question");
+		for (var i = 0; i < questions.length; i++) {
+			questions[i].addEventListener("click", function() 
+{
+				this.classList.toggle("active");
+				var answer = this.nextElementSibling;
+				if (answer.style.display === "block") {
+					answer.style.display = "none";
+				} else {
+					answer.style.display = "block";
+				}
+			});
+		}
+	</script>
+
+
+  </main>
+  
+  <footer>
+    <p>Copyright &copy; 2023 Christer Dalen</p>
+	          <p><a href="itms-apps://itunes.apple.com/app/6444596637"> <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store"> </a></p>
+  </footer>
+</body>
+</html>
+ 

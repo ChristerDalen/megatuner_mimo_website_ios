@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whats New - Megatuner</title>
+    <link rel="icon" type="image/png" href="img/Megatuner_invis.png">
+  <link rel="stylesheet" href="css/style.css">
+      <style>
+    .answer {
+      display: none;
+    }
+
+    .question {
+      cursor: pointer;
+    }
+    .question::before {
+      content: "+";
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+
+    .question.active::before {
+      content: "-";
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>        
+        <li><a href="WhatsNew.html">What’s New</a></li>
+        <li><a href="AppPrivacy.html">App Privacy</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="hero">
+      <ul>
+  <h2 class="question">Version 1.7 (May 15, 2023)</h2>
+  <div class="answer">
+    <ul>
+      Improvements:
+      <li>Implemented a change to the closed loop data chart functionality. This change ensures that the closed loop data effectively fills out the chart.</li>
+      <li>Improved the user interface by introducing conditional button availability. This modification prevents users from initiating actions without appropriate input.</li>
+    </ul>
+  </div>       
+  <h2 class="question">Version 1.6 (May 7, 2023)</h2>
+  <div class="answer">
+    <ul>
+      Improvements:
+      <li>Improved app layout for a better user experience.</li>
+      <li>Updated profile tab to include a link to the supporting website.</li>
+      <li>Changed the app icon for a fresh look.</li>
+    </ul>
+  </div>
+  <h2 class="question">Version 1.5 (Apr 29, 2023)</h2>
+  <div class="answer">  
+    <ul> 
+      Improvements:
+      <li>  Added incrementing and decrementing buttons on the tuning tab for adjusting the simulation time more easily.</li>
+      <li>  Added version(build) number on profile tab for easier identification of the app version.</li>
+      <li>  Made the megatuner image on profile tab transparent for a more polished look.</li>
+    </ul>
+  </div> 
+</p>
+  <h2 class="question">Version 1.4 (Apr 21, 2023)</h2>
+  <div class="answer"> 
+    <ul>
+      <li>Improvement: Added units on the vendor conversion</li>
+      <li>Bug fix: Importing error message fix...</li>
+    </ul>
+  </div>
+  <h2 class="question">Version 1.3 (Apr 5, 2023)</h2>
+  <p class="answer">Minor adjustments</p>
+  <h2 class="question">Version 1.2 (Mar 13, 2023)</h2>
+  <p class="answer">A subscription model has been implemented.</p>
+  <h2 class="question">Version 1.1 (Dec 12, 2022)</h2>
+  <p class="answer">Some minor adjustments.</p>
+  <h2 class="question">Version 1.0 (Nov 28, 2022)</h2>
+  <p class="answer"></p>
+  <script>
+    var questions = 
+document.getElementsByClassName("question");
+    for (var i = 0; i < questions.length; i++) {
+      questions[i].addEventListener("click", function() 
+{
+        this.classList.toggle("active");
+        var answer = this.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+
+  </main>
+  
+  <footer>
+    <p>Copyright &copy; 2023 Christer Dalen</p>
+	          <p><a href="itms-apps://itunes.apple.com/app/6444596637"> <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store"> </a></p>
+  </footer>
+</body>
+</html>
+ 
